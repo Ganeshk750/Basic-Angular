@@ -3,5 +3,4 @@ export class Student {
     firstname: string;
     lastname: string;
     age: number;
-    image: string;
 }

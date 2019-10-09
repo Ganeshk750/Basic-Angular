@@ -20,9 +20,24 @@
 
 <router-outlet></router-outlet> -->
 
-
+<!-- 
 <div class="container">
   <app-landing></app-landing>
   <app-modal></app-modal>
   <app-table></app-table>
-</div>
+</div> -->
+
+<!-- <h1>Student List</h1>
+<ul>
+  <li *ngFor="let student of students">
+    {{ student | json }}
+  </li>
+</ul> -->
+<h1>Student List</h1>
+<ul>
+ 
+  <li *ngFor="let student of observableStudents | async; index as i; odd as odd; even as even"
+  [ngClass]="{ odd: odd, even: even }">
+  {{i}} ---- {{ student | json }}
+  </li>
+</ul>
