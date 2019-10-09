@@ -1,0 +1,15 @@
+<div class="row">
+<div *ngFor= "let student of Students" class="col-sm-4">
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="assets/images/{{student.image}}.jpg" alt="Card image cap">
+    <hr>
+    <div class="card-body">
+      <h5 class="card-title">{{student.firstname}}</h5>
+      <h6>{{student.lastname}}</h6>
+      <h6>{{student.age}}</h6>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+</div>   
+</div>     
+
