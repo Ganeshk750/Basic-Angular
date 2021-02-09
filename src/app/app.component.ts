@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { Student } from './student';
-import { STUDENTS } from './mock-student';
-import { Observable, of } from 'rxjs';
+//import { Student } from './student';
+//import { STUDENTS } from './mock-student';
+//import { Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -9,15 +9,15 @@ import { Observable, of } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'BASIC APPLICATION';
+  title = 'ngBook';
 
 
- // students : Student[];
+  // students : Student[];
 
-  observableStudents: Observable<Student[]>;
+  // observableStudents: Observable<Student[]>;
 
-  ngOnInit() {
-    //this.students = STUDENTS;
-    this.observableStudents = of(STUDENTS);
-  }
+  /*  ngOnInit() {
+     //this.students = STUDENTS;
+     this.observableStudents = of(STUDENTS);
+   } */
 }

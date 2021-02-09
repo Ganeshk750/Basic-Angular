@@ -3,5 +3,7 @@ export class Student {
     firstname: string;
     lastname: string;
     age: number;
-    score:number;
+    /* score: number; */
 }
+
+
