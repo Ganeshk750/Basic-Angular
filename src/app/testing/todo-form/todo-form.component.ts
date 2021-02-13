@@ -6,7 +6,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './todo-form.component.html',
   styleUrls: ['./todo-form.component.css']
 })
-export class TodoFormComponent implements OnInit {
+export class TodoFormComponent {
 
   form: FormGroup;
 
@@ -15,9 +15,6 @@ export class TodoFormComponent implements OnInit {
       name: ['', Validators.required],
       email: ['']
     })
-  }
-
-  ngOnInit() {
   }
 
 }

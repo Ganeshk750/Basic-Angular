@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormBuilder } from '@angular/forms';
 
 import { TodoFormComponent } from './todo-form.component';
 
@@ -8,9 +9,10 @@ describe('TodoFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TodoFormComponent ]
+      declarations: [TodoFormComponent],
+      providers: [FormBuilder]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -22,4 +24,9 @@ describe('TodoFormComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should create a form with 2 controles',() =>{
+    expect(component.form.contains('name')).toBe(true);
+    expect(component.form.contains('email')).toBeTruthy;
+  })
 });
