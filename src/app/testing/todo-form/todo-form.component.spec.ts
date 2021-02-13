@@ -28,5 +28,11 @@ describe('TodoFormComponent', () => {
   it('should create a form with 2 controles',() =>{
     expect(component.form.contains('name')).toBe(true);
     expect(component.form.contains('email')).toBeTruthy;
+  });
+
+  it('should make the name controle required', () =>{
+    let controle = component.form.get('name');
+    controle.setValue('');
+    expect(controle.valid).toBeFalsy;
   })
 });
