@@ -8,9 +8,9 @@ describe('VoteComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ VoteComponent ]
+      declarations: [VoteComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -22,4 +22,12 @@ describe('VoteComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should raise voteChanged event when upVoted', () => {
+    let totalVotes = null;
+    component.voteChanged.subscribe(vote => totalVotes = vote);
+    component.upVote();
+    expect(totalVotes).not.toBeNull;
+    expect(totalVotes).toBe(1);
+  })
 });
