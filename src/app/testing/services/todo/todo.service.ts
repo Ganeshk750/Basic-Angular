@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { pipe } from 'rxjs';
+import { pipe, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 @Injectable({
@@ -10,20 +10,20 @@ export class TodoService {
 
   constructor(private http: HttpClient) { }
 
-  add(todo) {
-    return this.http.post('...', todo).pipe(
+  add(todo): Observable<any> {
+    return this.http.post<any>('...', todo).pipe(
       map(r => r)
     );
   }
 
-  getTodos() {
-    return this.http.get('...').pipe(
+  getTodos(): Observable<any[]> {
+    return this.http.get<any[]>('...').pipe(
       map(r => r)
     );
   }
 
-  delete(id) {
-    return this.http.delete('...').pipe(
+  delete(id): Observable<any> {
+    return this.http.delete<any>('...').pipe(
       map(r => r)
     );
   }
