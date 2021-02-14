@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { TodoFormComponent } from './testing/todo-form/todo-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { VoteComponent } from './testing/event-emmiters/vote/vote.component';
+import { TodoComponent } from './testing/services/todo/todo.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoFormComponent,
-    VoteComponent
+    VoteComponent,
+    TodoComponent
   ],
   imports: [
     BrowserModule,
